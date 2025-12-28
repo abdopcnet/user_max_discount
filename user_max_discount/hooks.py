@@ -145,6 +145,15 @@ app_license = "mit"
 # 	}
 # }
 
+doc_events = {
+	"Sales Order": {
+		"validate": "user_max_discount.user_max_discount.doctype.user_discount.user_discount.validate_user_discount"
+	},
+	"Sales Invoice": {
+		"validate": "user_max_discount.user_max_discount.doctype.user_discount.user_discount.validate_user_discount"
+	}
+}
+
 # Scheduled Tasks
 # ---------------
 
