@@ -44,7 +44,7 @@ frappe.ui.form.on("Sales Invoice", {
 // Independent validation functions - each makes its own API call
 function validate_item_discount_percentage_si(frm, value, cdt, cdn) {
 	frappe.call({
-		method: "masheed.masheed_customization.doctype.user_discount.user_discount.validate_item_discount_percentage",
+		method: "user_max_discount.user_max_discount.doctype.user_discount.user_discount.validate_item_discount_percentage",
 		args: {
 			user: frappe.session.user,
 			company: frm.doc.company,
@@ -68,7 +68,7 @@ function validate_item_discount_percentage_si(frm, value, cdt, cdn) {
 
 function validate_item_discount_amount_si(frm, amount, price_list_rate, qty, cdt, cdn) {
 	frappe.call({
-		method: "masheed.masheed_customization.doctype.user_discount.user_discount.validate_item_discount_amount",
+		method: "user_max_discount.user_max_discount.doctype.user_discount.user_discount.validate_item_discount_amount",
 		args: {
 			user: frappe.session.user,
 			company: frm.doc.company,
@@ -94,7 +94,7 @@ function validate_item_discount_amount_si(frm, amount, price_list_rate, qty, cdt
 
 function validate_invoice_discount_percentage_si(frm, value) {
 	frappe.call({
-		method: "masheed.masheed_customization.doctype.user_discount.user_discount.validate_invoice_discount_percentage",
+		method: "user_max_discount.user_max_discount.doctype.user_discount.user_discount.validate_invoice_discount_percentage",
 		args: {
 			user: frappe.session.user,
 			company: frm.doc.company,
@@ -118,7 +118,7 @@ function validate_invoice_discount_percentage_si(frm, value) {
 
 function validate_invoice_discount_amount_si(frm, amount, base_grand_total) {
 	frappe.call({
-		method: "masheed.masheed_customization.doctype.user_discount.user_discount.validate_invoice_discount_amount",
+		method: "user_max_discount.user_max_discount.doctype.user_discount.user_discount.validate_invoice_discount_amount",
 		args: {
 			user: frappe.session.user,
 			company: frm.doc.company,
