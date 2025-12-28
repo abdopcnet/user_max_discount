@@ -1,36 +1,44 @@
-### User Max Discount
+# User Max Discount
 
 ![Version](https://img.shields.io/badge/version-28.12.2025-blue)
 
 
-User Max Discount
+Control discount limits for users in Sales Order and Sales Invoice documents.
 
-### Installation
+## Features
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+- **User-Based Limits**: Set discount percentage limits per user
+- **Item Level Validation**: Control discounts on individual items
+- **Invoice Level Validation**: Control document-level discounts
+- **Real-Time Validation**: Client-side validation on field changes
+- **Server-Side Protection**: Validation hook on document save
+- **Company Filtering**: Optional company-specific limits
+- **Administrator Bypass**: Administrator has no restrictions
 
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app user_max_discount
-```
-
-### Contributing
-
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+## Installation
 
 ```bash
-cd apps/user_max_discount
-pre-commit install
+bench get-app user_max_discount
+bench --site [site] install-app user_max_discount
 ```
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+## Usage
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
+1. Configure settings: Desk → User Discount
+2. Add users to User Discount Table
+3. Set Item Discount % and Invoice Discount % limits
+4. Validation applies automatically in Sales Order/Invoice
 
-### License
+## Supported Fields
 
-mit
+**Items:**
+- discount_percentage
+- discount_amount
+
+**Document:**
+- additional_discount_percentage
+- discount_amount
+
+## License
+
+MIT
