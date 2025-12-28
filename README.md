@@ -1,5 +1,8 @@
 ### User Max Discount
 
+![Version](https://img.shields.io/badge/version-28.12.2025-blue)
+
+
 User Max Discount
 
 ### Installation
